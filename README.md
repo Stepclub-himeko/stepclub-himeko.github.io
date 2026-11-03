@@ -14,33 +14,6 @@ GitHub Pages で公開しています。
 | 自己評価表 | `html/evaluation.html` | 年度ごとの自己評価表の画像 |
 | 採用情報 | `html/recruit.html` | 保育士・児童指導員の求人（正社員・パート） |
 
-## フォルダ構成
-
-```
-.
-├── index.html                    トップページ
-├── _config.yml                   
-├── googlecb88166d18c6c793.html   
-├── css/
-│   ├── main.css                  トップページのデザイン
-│   ├── weekly_timetable.css      週間時間割表のデザイン
-│   └── images/sky.jpg            背景画像
-├── images/                       トップページで使う画像
-│   ├── favicon.png               サイトのアイコン（192×192）
-│   ├── tel.png                   電話アイコン
-│   └── IMG_xxxx.jpg              施設の写真
-└── html/
-    ├── weekly_timetable.html     週間時間割表
-    ├── evaluation.html           自己評価表
-    ├── recruit.html              採用情報
-    ├── css/
-    │   ├── evaluation.css
-    │   └── recruit.css           採用情報のデザイン
-    └── images/
-        ├── weekly-timetable.png  週間時間割表の画像
-        └── evaluation/<年度>/    自己評価表の画像
-```
-
 ## お問い合わせ
 
 一般社団法人 ステップライフ　ステップクラブ姫子
