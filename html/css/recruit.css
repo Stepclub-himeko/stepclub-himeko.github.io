@@ -1,0 +1,269 @@
+/* 採用情報ページ（トップページ css/main.css のデザインに合わせています） */
+
+body{
+    background-image: url(../../css/images/sky.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+h2{
+    text-shadow: 3px 3px 5px #414141;
+    font-size: 30px;
+    text-align: center;
+}
+
+h3{
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.first{
+    background-color: rgb(255, 174, 0);
+    text-align: center;
+    text-shadow: 3px 3px 5px #e0dfdf;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bold;
+    padding-top: 3px;
+    margin: 0;
+}
+
+/* タイトル（トップページと同じ楕円の枠） */
+.title{
+    text-align: center;
+    border: solid 3px rgb(0, 255, 13);
+    border-radius: 50%;
+    text-shadow: 3px 3px 5px #414141;
+    box-shadow: 3px 3px 5px #797878;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px 0;
+    color: white;
+    box-sizing: border-box;
+    width: min(60vh, calc(100vw - 20px));
+}
+
+.title-sub{
+    font-size: 24px;
+}
+
+.tel{
+    text-shadow: 3px 3px 5px #c0c0c0;
+}
+
+.tel h3{
+    font-size: 25px;
+}
+
+.tel-number{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+/* 募集にあたって */
+.message{
+    width: min(80vw, 104vh);
+    text-align: justify;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.message-title{
+    color: yellow;
+    text-align: left;
+}
+
+.message-text{
+    font-size: 20px;
+    line-height: 2.5;
+}
+
+/* 正社員・パートの求人ブロック */
+.job-block{
+    width: 90vw;
+    margin: auto;
+    margin-top: 50px;
+}
+
+@media (min-width: 960px){
+    .job-block{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        align-items: start;
+    }
+}
+
+.job{
+    margin-bottom: 50px;
+}
+
+.job-title{
+    margin-top: 0;
+}
+
+.full-time-title{
+    color: rgb(250, 141, 141);
+}
+
+.part-title{
+    color: aqua;
+}
+
+.job-list{
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: double 4px rgb(124, 213, 255);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px #797878;
+}
+
+.job-row{
+    display: flex;
+    padding: 15px 0;
+    border-bottom: dashed 1px rgb(124, 213, 255);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.job-row:last-child{
+    border-bottom: none;
+}
+
+.job-row dt{
+    flex: 0 0 10em;
+    font-weight: bold;
+    color: blue;
+}
+
+.job-row dd{
+    flex: 1;
+    margin: 0;
+}
+
+/* スマホでは項目名を上、内容を下に */
+@media (max-width: 600px){
+    .job-row{
+        display: block;
+    }
+
+    .job-row dt{
+        margin-bottom: 5px;
+    }
+
+    .time{
+        display: block;
+    }
+}
+
+.salary{
+    font-size: 20px;
+    color: rgb(255, 73, 73);
+}
+
+.schedule,
+.dot-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.schedule li,
+.dot-list li{
+    position: relative;
+    padding-left: 1em;
+}
+
+.schedule li::before,
+.dot-list li::before{
+    content: '・';
+    position: absolute;
+    left: 0;
+}
+
+.time{
+    display: inline-block;
+    min-width: 7em;
+    font-weight: bold;
+    color: rgb(255, 120, 0);
+}
+
+/* 最後の呼びかけ */
+.lastly{
+    margin-bottom: 30px;
+    color: rgb(255, 166, 0);
+    text-align: center;
+}
+
+/* トップへ戻るボタン（トップページのリンクボックスと同じデザイン） */
+.link-block{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.top-link{
+    margin: auto;
+}
+
+.link-box{
+    position: relative;
+    border: double 2px white;
+    font-size: 25px;
+    height: 8vh;
+    min-height: 50px;
+    width: max(30vw, 280px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 98, 125);
+    background-color: rgb(124, 213, 255);
+    text-shadow: 3px 3px 5px #414141;
+    transition: background-color 0.5s;
+}
+
+.link-box::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: rgb(124, 213, 255) #fff;
+}
+
+@media (hover: hover){
+    .link-box:hover{
+        background-color: rgb(255, 255, 255);
+        color: rgb(52, 174, 255);
+        text-shadow: 3px 3px 5px rgb(160, 160, 160);
+    }
+
+    .link-box:hover::after{
+        border-color: #fff;
+    }
+}
+
+footer{
+    text-align: center;
+}
+
+.company-name h2{
+    font-size: 25px;
+    text-shadow: none;
+}
+
+.address{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.address h3{
+    width: 80vw;
+}
