@@ -1,3 +1,9 @@
+/* トップページ（下層ページ html/css/common.css と同じデザインに統一） */
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-image: url(images/sky.jpg);
     background-size: cover;
@@ -22,13 +28,14 @@ a{
     background-color: rgb(255, 174, 0);
     text-align: center;
     text-shadow: 3px 3px 5px #e0dfdf;
-    color : rgb(0, 0, 0);
-    font-size:larger;
+    color: rgb(0, 0, 0);
+    font-size: larger;
     font-weight: bold;
-    padding-top: 3px;
+    padding: 3px 10px 0;
     margin: 0;
 }
 
+/* タイトル（緑の楕円の枠） */
 .title{
     text-align: center;
     border: solid 3px rgb(0, 255, 13);
@@ -36,344 +43,174 @@ a{
     text-shadow: 3px 3px 5px #414141;
     box-shadow: 3px 3px 5px #797878;
     margin: auto;
+    margin-top: 30px;
+    padding: 10px 0;
     color: white;
-    width: min(60vh,100vw);
+    box-sizing: border-box;
+    width: min(60vh, calc(100vw - 20px));
 }
 
 .tel{
     text-shadow: 3px 3px 5px #c0c0c0;
-    
-    h3{
-        font-size: 25px;
-    }
+}
+
+.tel h3{
+    font-size: 25px;
 }
 
 .tel-number{
     font-size: 25px;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
-.company-philosophy{
-    width: min(80vw,104vh);
-    text-align: justify;
+/* ページ内メニュー */
+.page-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: min(90vw, 1100px);
+    margin: 30px auto 0;
+}
+
+.page-nav a{
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: solid 2px rgb(124, 213, 255);
+    color: rgb(52, 120, 200);
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+@media (hover: hover){
+    .page-nav a:hover{
+        background-color: rgb(124, 213, 255);
+        color: white;
+    }
+}
+
+/* セクションと白い枠 */
+.section{
+    width: min(90vw, 1100px);
     margin: auto;
     margin-top: 50px;
-    font-size: 18px;
+    scroll-margin-top: 20px;
 }
 
+.card{
+    box-sizing: border-box;
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.88);
+    border: double 4px rgb(124, 213, 255);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px #797878;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.card p{
+    margin: 8px 0;
+}
+
+/* 見出しの色（元のデザインを踏襲） */
 .company-philosophy-title{
     color: yellow;
-    text-align: left;
-}
-
-.company-philosophy-text{
-    font-size: 20px;
-    line-height: 3;
-}
-
-.management-philosophy{
-    text-align: justify;
-    margin: auto;
-    margin-top: 50px;
-    width: min(60vh,100vw);
-    font-size: 18px;
-}
-
-.future-title{
-    color: aqua;
-    text-align: left;
-}
-
-.growth-title{
-    color: orange;
-    text-align: left;
-}
-
-.children-title{
-    color: greenyellow;
-    text-align: left;
-}
-
-.characteristics{
-    margin: auto;
-    margin-top: 50px;
-    text-align: justify;
-    font-size: 18px;
-    width: 90vw;
 }
 
 .characteristics-title{
     color: rgb(250, 141, 141);
-    text-align: initial;
-}
-
-@media (min-width: 768px) {
-    .characteristics-title{
-        color: rgb(250, 141, 141);
-        text-align: center;
-    }
-}
-
-.characteristics-block{
-    width: 80vw;
-    margin: auto;
-}
-
-.elementary-junior{
-    font-size: 22px;
-    width: 22vh;
-    border-radius: 50%;
-    border: solid 5px rgb(0, 255, 13);
-    border-radius: 50%;
-    float: left;
-    margin: auto;
-}
-
-.characteristics-text{
-    line-height: 3;
-    margin-bottom: 20px;
-}
-
-.junior-high{
-    font-size: 22px;
-    width: 22vh;
-    border-radius: 50%;
-    border: solid 5px rgb(0, 255, 13);
-    border-radius: 50%;
-    float: left;
-    margin: auto;
-}
-
-.support-details{
-    margin: auto;
-    margin-top: 50px;
-    text-align: justify;
-    font-size: 18px;
-}
-
-@media (min-width:960px){
-    .support-details{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 200px 200px;
-        grid-gap: 20px;
-        margin-bottom: 20px;
-    }    
 }
 
 .support-details-title{
-    text-align: left;
-    color:aqua;
-}
-
-@media (min-width: 960px){
-    .support-details-title{
-        height: 20vh;
-        text-align: center;
-        color:aqua;
-        grid-row: 1;
-        grid-column: 2;
-    }
-}
-
-.health-life{
-    display: flex;
-    width: 90vw;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-@media (min-width: 960px){
-    .health-life{
-        display: block;
-        width: 30vw;
-        height: 20vh;
-        margin: auto;
-        grid-row: 1;
-        grid-column: 1;
-    }
-}
-
-.health-life-title{
-    width: 45vw;
-    color: blue;
-    
-}
-
-@media (min-width:960px) {
-    .health-life-title{
-        width: 30vw;
-        text-align: center;
-    }
-}
-
-.exercise-feeling{
-    display: flex;
-    width: 90vw;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-@media (min-width:960px) {
-    .exercise-feeling{
-        display: block;
-        width: 30vw;
-        height: 20vh;
-        margin: auto;
-        grid-row: 1;
-        grid-column: 3;
-    }
-}
-
-.exercise-feeling-title{
-    width: 41vw;
-    color: blue;
-}
-
-@media (min-width:960px) {
-    .exercise-feeling-title{
-        width: 30vw;
-        text-align: center;
-    }
-}
-
-.recognition-behavior{
-    display: flex;
-    width: 90vw;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-@media (min-width:960px) {
-    .recognition-behavior{
-        display: block;
-        width: 30vw;
-        height: 20vh;
-        margin: auto;
-        grid-row: 2;
-        grid-column: 1;
-    }
-}
-
-.recognition-behavior-title{
-    width: 47vw;
-    color: blue;
-}
-
-@media (min-width:960px) {
-    .recognition-behavior-title{
-        width: 30vw;
-        text-align: center;
-    }
-}
-
-.language-communication{
-    display: flex;
-    width: 90vw;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-@media (min-width:960px) {
-    .language-communication{
-        display: block;
-        width: 30vw;
-        height: 20vh;
-        margin: auto;
-        grid-row: 2;
-        grid-column: 2;
-    }
-}
-
-.language-communication-title{
-    width: 125vh;
-    color: blue;
-}
-
-@media (min-width:960px) {
-    .language-communication-title{
-        width: 30vw;
-        text-align: center;
-    }
-}
-
-.relationships-sociality{
-    display: flex;
-    width: 90vw;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-@media (min-width:960px) {
-    .relationships-sociality{
-        display: block;
-        width: 30vw;
-        height: 20vh;
-        margin: auto;
-        grid-row: 2;
-        grid-column: 3;
-    }
-}
-
-.relationships-sociality-title{
-    width: 63vw;
-    color: blue;
-}
-
-@media (min-width:960px) {
-    .relationships-sociality-title{
-        width: 30vw;
-        text-align: center;
-    }
-}
-
-.activities{
-    margin: auto;
-    margin-top: 50px;
+    color: aqua;
 }
 
 .activities-title{
     color: rgb(255, 73, 73);
-    text-align: left;
 }
 
-@media (min-width:768px) {
-    .activities-title{
-        text-align: center;
+.introduction-title{
+    color: rgb(240, 255, 31);
+}
+
+/* 事業所理念 */
+.philosophy-card{
+    text-align: center;
+}
+
+.catch{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 120, 0);
+}
+
+/* 特徴 */
+.characteristics-block{
+    display: grid;
+    gap: 20px;
+}
+
+@media (min-width: 768px){
+    .characteristics-block{
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-.activities-text{
-    line-height: 3;
+.badge{
+    display: inline-block;
+    margin: 5px 0;
+    padding: 2px 18px;
     font-size: 20px;
-    width: min(80vw,104vh);
-    text-align: justify;
+    border: solid 4px rgb(0, 255, 13);
+    border-radius: 30px;
+    background-color: white;
 }
 
+/* 支援プログラム */
+.support-details{
+    display: grid;
+    gap: 20px;
+}
+
+@media (min-width: 640px){
+    .support-details{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 960px){
+    .support-details{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.support-card h3{
+    margin: 0;
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: dashed 1px rgb(124, 213, 255);
+}
+
+.support-card p{
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ページへのリンクボタン */
 .link-block{
-    display: flex;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    display: grid;
+    gap: 20px;
+    width: min(90vw, 1100px);
+    margin: 60px auto 10px;
 }
 
-.weekly-timetable{
-    margin: auto;
-}
-
-.weekly-timetable-title{
-    color: rgb(210, 156, 255);
-}
-
-.evaluation{
-    margin: auto;
-}
-
-.evaluation-title{
-    color: orange;
-}
-
-.recruit-link-block{
-    margin: auto;
+@media (min-width: 768px){
+    .link-block{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .link-box{
@@ -381,14 +218,14 @@ a{
     border: double 2px white;
     font-size: 25px;
     height: 8vh;
-    width: 30vw;
-    margin: auto;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 98, 125);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
     background-color: rgb(124, 213, 255);
-    text-shadow: 3px 3px 5px #414141;
+    text-shadow: 2px 2px 3px rgb(230, 60, 100);
     transition: background-color 0.5s;
 }
 
@@ -399,113 +236,92 @@ a{
     top: 0;
     border-width: 0 20px 20px 0;
     border-style: solid;
-    border-color: rgb(124, 213, 255) #fff ;
-    
+    border-color: rgb(124, 213, 255) #fff;
 }
 
-@media (hover:hover) {
+@media (hover: hover){
     .link-box:hover{
         background-color: rgb(255, 255, 255);
         color: rgb(52, 174, 255);
         text-shadow: 3px 3px 5px rgb(160, 160, 160);
     }
+
     .link-box:hover::after{
         border-color: #fff;
-    }    
-}
-
-.introduction-title{
-    color: rgb(240, 255, 31);
-}
-
-.introduction-block1{
-    text-align: center;
-    margin: auto;
-    display: grid;
-    width: 90vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px;
-    grid-gap: 20px;
-    margin-bottom: 50px;
-}
-
-@media (min-width:960px) {
-    .introduction-block1{
-        width: 60vw;    
     }
 }
 
-.target-children{
-    grid-row: 1;
-    grid-column: 1;
-}
-
-.capacity{
-    grid-row: 2;
-    grid-column: 1;
-}
-
-.introduction-block2{
-    text-align: center;
-    margin: auto;
+/* 施設紹介（情報と写真を交互に並べる） */
+.introduction-block{
     display: grid;
-    width: 90vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 180px 180px;
-    grid-gap: 20px;
-    margin-bottom: 50px;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-@media (min-width:960px) {
-    .introduction-block2{
-        width: 60vw;    
+@media (min-width: 768px){
+    .introduction-block{
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .introduction-block.reverse .info{
+        order: 2;
     }
 }
 
-.business-days{
-    grid-row: 1;
-    grid-column: 2;
+.info dl{
+    margin: 0;
 }
 
-.business-holiday{
-    grid-row: 2;
-    grid-column: 2;
+.info dt{
+    font-weight: bold;
+    color: blue;
+    font-size: 20px;
 }
 
-.introduction-block3{
-    text-align: center;
+.info dt::before{
+    content: '・';
+}
+
+.info dd{
+    margin: 0 0 12px 1em;
+}
+
+.info dd:last-child{
+    margin-bottom: 0;
+}
+
+.photo{
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     margin: auto;
-    display: grid;
-    width: 90vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px;
-    grid-gap: 20px;
-    margin-bottom: 50px;
+    border: solid 4px white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px #797878;
 }
 
-@media (min-width:960px) {
-    .introduction-block3{
-        width: 60vw;    
-    }
-}
-
-.expense{
-    grid-row: 1;
-    grid-column: 1;
-}
-
-.transportation-service{
-    grid-row: 2;
-    grid-column: 1;
-}
-
+/* 最後の呼びかけ */
 .lastly{
-    margin-bottom: 50px;
+    margin: 50px auto 50px;
+    width: 90vw;
     color: rgb(255, 166, 0);
+    text-align: center;
 }
 
+/* フッター */
 footer{
     text-align: center;
+    padding-bottom: 20px;
+}
+
+.company-name h2{
+    font-size: 25px;
+    text-shadow: none;
 }
 
 .recruit{
@@ -524,18 +340,10 @@ footer{
     transition: background-color 0.5s;
 }
 
-@media (hover:hover) {
+@media (hover: hover){
     .recruit-footer-link:hover{
         background-color: rgb(124, 213, 255);
         color: rgb(255, 255, 255);
-    }
-}
-
-.company-name{
-        
-    h2{
-        font-size: 25px;
-        text-shadow: none;
     }
 }
 
@@ -543,20 +351,33 @@ footer{
     margin: auto;
     text-align: center;
     margin-bottom: 25px;
-
-    h3{
-        width: 80vw;
-    }
 }
 
-@media (min-width:768px) {
-    .address{
-        p{
-            float: right;
-        }
+.address h3{
+    width: 80vw;
+}
 
-        a{
-            width: 170px;
-        }
+/* スマホ向けの文字サイズ調整 */
+@media (max-width: 600px){
+    h2{
+        font-size: 26px;
+    }
+
+    .card{
+        padding: 12px 18px;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .catch{
+        font-size: 20px;
+    }
+
+    .link-box{
+        font-size: 22px;
+    }
+
+    .recruit-footer-link{
+        font-size: 16px;
     }
 }
