@@ -19,8 +19,8 @@ GitHub Pages で公開しています。
 ```
 .
 ├── index.html                    トップページ
-├── _config.yml                   GitHub Pages の設定（サイトマップの自動生成）
-├── googlecb88166d18c6c793.html   Google Search Console の所有権確認用（削除しない）
+├── _config.yml                   
+├── googlecb88166d18c6c793.html   
 ├── css/
 │   ├── main.css                  トップページのデザイン
 │   ├── weekly_timetable.css      週間時間割表のデザイン
