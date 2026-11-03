@@ -10,8 +10,8 @@ GitHub Pages で公開しています。
 | ページ | ファイル | 内容 |
 |---|---|---|
 | トップページ | `index.html` | 事業所理念・特徴・支援プログラム・活動内容・施設紹介・所在地 |
-| 週間時間割表 | `html/weekly_timetable.html` | 週間時間割表の画像 |
-| 自己評価表 | `html/evaluation.html` | 年度ごとの自己評価表の画像 |
+| 週間時間割表 | `html/weekly_timetable.html` | 週間時間割表 |
+| 自己評価表 | `html/evaluation.html` | 年度ごとの自己評価表 |
 | 採用情報 | `html/recruit.html` | 保育士・児童指導員の求人（正社員・パート） |
 
 ## お問い合わせ
