@@ -1,0 +1,162 @@
+/* 下層ページ共通（トップページ css/main.css・採用情報 recruit.css のデザインに合わせています） */
+
+body{
+    background-image: url(../../css/images/sky.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+h2{
+    text-shadow: 3px 3px 5px #414141;
+    font-size: 30px;
+    text-align: center;
+}
+
+h3{
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.first{
+    background-color: rgb(255, 174, 0);
+    text-align: center;
+    text-shadow: 3px 3px 5px #e0dfdf;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bold;
+    padding-top: 3px;
+    margin: 0;
+}
+
+/* タイトル（トップページと同じ楕円の枠） */
+.title{
+    text-align: center;
+    border: solid 3px rgb(0, 255, 13);
+    border-radius: 50%;
+    text-shadow: 3px 3px 5px #414141;
+    box-shadow: 3px 3px 5px #797878;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px 0;
+    color: white;
+    box-sizing: border-box;
+    width: min(60vh, calc(100vw - 20px));
+}
+
+.title-sub{
+    font-size: 24px;
+}
+
+.tel{
+    text-shadow: 3px 3px 5px #c0c0c0;
+}
+
+.tel h3{
+    font-size: 25px;
+}
+
+.tel-number{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+/* 本文の白い枠 */
+.section{
+    width: min(90vw, 1100px);
+    margin: auto;
+    margin-top: 50px;
+}
+
+.card{
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.88);
+    border: double 4px rgb(124, 213, 255);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px #797878;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.lead{
+    font-size: 18px;
+    line-height: 2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.note{
+    font-size: 15px;
+    margin: 10px 0 0;
+}
+
+/* トップへ戻るボタン（トップページのリンクボックスと同じデザイン） */
+.link-block{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.top-link{
+    margin: auto;
+}
+
+.link-box{
+    position: relative;
+    border: double 2px white;
+    font-size: 25px;
+    height: 8vh;
+    min-height: 50px;
+    width: max(30vw, 280px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 98, 125);
+    background-color: rgb(124, 213, 255);
+    text-shadow: 3px 3px 5px #414141;
+    transition: background-color 0.5s;
+}
+
+.link-box::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: rgb(124, 213, 255) #fff;
+}
+
+@media (hover: hover){
+    .link-box:hover{
+        background-color: rgb(255, 255, 255);
+        color: rgb(52, 174, 255);
+        text-shadow: 3px 3px 5px rgb(160, 160, 160);
+    }
+
+    .link-box:hover::after{
+        border-color: #fff;
+    }
+}
+
+footer{
+    text-align: center;
+}
+
+.company-name h2{
+    font-size: 25px;
+    text-shadow: none;
+}
+
+.address{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.address h3{
+    width: 80vw;
+}
