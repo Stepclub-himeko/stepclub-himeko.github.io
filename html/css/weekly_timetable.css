@@ -1,0 +1,146 @@
+/* 週間時間割表（共通部分は common.css） */
+
+.weekday-title{
+    color: rgb(250, 141, 141);
+}
+
+.saturday-title{
+    color: aqua;
+}
+
+.area-title{
+    color: yellow;
+}
+
+.table-card{
+    padding: 10px;
+}
+
+/* スマホでは表を横にスクロール */
+.table-scroll{
+    overflow-x: auto;
+}
+
+.scroll-hint{
+    display: none;
+    margin: 0 0 8px;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(255, 98, 125);
+    font-weight: bold;
+}
+
+@media (max-width: 800px){
+    .scroll-hint{
+        display: block;
+    }
+}
+
+.timetable{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+}
+
+.weekday{
+    min-width: 760px;
+    table-layout: fixed;
+}
+
+.timetable th,
+.timetable td{
+    border: solid 1px rgb(124, 213, 255);
+    padding: 12px 8px;
+    vertical-align: middle;
+}
+
+.timetable thead th{
+    background-color: rgb(124, 213, 255);
+    color: white;
+    text-shadow: 2px 2px 3px #414141;
+    font-size: 18px;
+}
+
+.timetable .time-col{
+    width: 6em;
+    white-space: nowrap;
+    color: rgb(255, 120, 0);
+    background-color: rgba(255, 245, 225, 0.9);
+}
+
+.timetable thead .time-col{
+    color: white;
+    background-color: rgb(124, 213, 255);
+}
+
+/* 送迎の行 */
+.timetable .move{
+    background-color: rgba(255, 174, 0, 0.18);
+    font-weight: bold;
+}
+
+/* 集団学習 */
+.group{
+    vertical-align: top;
+    text-align: left;
+}
+
+.group-name{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+    margin-bottom: 8px;
+}
+
+.group ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.group li{
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.group li:last-child{
+    margin-bottom: 0;
+}
+
+.area{
+    display: block;
+    font-size: 14px;
+    color: rgb(255, 98, 125);
+    font-weight: bold;
+}
+
+.saturday{
+    max-width: 700px;
+    margin: auto;
+}
+
+/* 5領域 */
+.note-top{
+    margin-top: 0;
+}
+
+.five-areas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.five-areas li{
+    font-weight: bold;
+}
+
+.five-areas .area{
+    display: inline;
+    font-size: inherit;
+    margin-right: 5px;
+}
