@@ -372,6 +372,10 @@ a{
     color: orange;
 }
 
+.recruit-link-block{
+    margin: auto;
+}
+
 .link-box{
     position: relative;
     border: double 2px white;
@@ -502,6 +506,29 @@ a{
 
 footer{
     text-align: center;
+}
+
+.recruit{
+    margin-bottom: 25px;
+}
+
+.recruit-footer-link{
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 98, 125);
+    background-color: rgb(255, 255, 255);
+    border: double 3px rgb(124, 213, 255);
+    border-radius: 30px;
+    transition: background-color 0.5s;
+}
+
+@media (hover:hover) {
+    .recruit-footer-link:hover{
+        background-color: rgb(124, 213, 255);
+        color: rgb(255, 255, 255);
+    }
 }
 
 .company-name{
