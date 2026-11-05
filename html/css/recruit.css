@@ -199,6 +199,46 @@ a{
     text-align: center;
 }
 
+.contact{
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: double 4px rgb(124, 213, 255);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px #797878;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.contact p{
+    margin: 0;
+}
+
+.contact a{
+    color: rgb(52, 120, 200);
+    word-break: break-all;
+}
+
+.contact-person{
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .contact{
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    .contact-person{
+        font-size: 16px;
+    }
+}
+
 /* トップへ戻るボタン（トップページのリンクボックスと同じデザイン） */
 .link-block{
     display: flex;
